@@ -9,6 +9,6 @@ userRouter.post('/login', login)
 
 userRouter.use(verifyJWT)
 userRouter.get('/getuser', getUser)
-userRouter.post('/logout', logout)
+userRouter.get('/logout', logout)
 
 export default userRouter

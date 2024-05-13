@@ -27,6 +27,8 @@ function App() {
           "http://localhost:5000/api/v1/users/getuser",
           { withCredentials: true }
         );
+        // console.log(response);
+        // console.log(response.data.user);
         setUser(response.data.user);
         setIsAuthorized(true);
       } catch (error) {

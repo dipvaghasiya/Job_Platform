@@ -12,10 +12,12 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.post(
+      // console.log(user);
+      const response = await axios.get(
         "http://localhost:5000/api/v1/users/logout",
         { withCredentials: true }
       );
+      // console.log(response);
       toast.success(response.data.message);
       setIsAuthorized(false);
       navigateTo("/login");
