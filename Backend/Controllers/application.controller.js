@@ -7,7 +7,7 @@ import { Job } from "../Models/job.model.js";
 
 export const createApplication = asyncHandler(async (req, res, next) => {
   const { role } = req.user;
-  if (role !== "Employer") {
+  if (role !== "Job Seeker") {
     throw new APIError(400, "Invalid user");
   }
 
