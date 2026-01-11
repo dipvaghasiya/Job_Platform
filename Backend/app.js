@@ -10,9 +10,7 @@ import { errorMiddleware } from './Middlewares/APIError.middleware.js'
 
 const app = express()
 
-config({
-    path: './config/config.env'
-})
+config()
 
 app.use(cors({
     origin: process.env.FRONTEND_URL,
